@@ -3,7 +3,7 @@ ARG BASEIMAGE=node:14.19.2-alpine
 FROM ${BASEIMAGE}
 
 # Installs compatibility libs
-RUN apk add --no-cache make pkgconfig gcc g++ python3 libx11-dev libxkbfile-dev
+RUN apk add --no-cache make pkgconfig gcc g++ python3 libx11-dev libxkbfile-dev libsecret-dev
 ARG version=new
 WORKDIR /home/theia
 ADD $version.package.json ./package.json
