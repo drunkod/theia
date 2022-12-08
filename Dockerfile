@@ -1,5 +1,5 @@
 # ARG BASEIMAGE=node:12.18.3-alpine
-ARG BASEIMAGE=node:19.2-alpine
+ARG BASEIMAGE=node:14-alpine
 FROM ${BASEIMAGE}
 
 # Installs compatibility libs
