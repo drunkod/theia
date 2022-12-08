@@ -1,10 +1,15 @@
-ARG BASEIMAGE=node:12.18.3-alpine
+# ARG BASEIMAGE=node:12.18.3-alpine
+ARG BASEIMAGE=node:19.2-alpine
 FROM ${BASEIMAGE}
+
+# Installs compatibility libs
 RUN apk add --no-cache make pkgconfig gcc g++ python libx11-dev libxkbfile-dev
 ARG version=latest
 WORKDIR /home/theia
 ADD $version.package.json ./package.json
 ARG GITHUB_TOKEN
+
+# Build yarn theia build
 RUN yarn --pure-lockfile && \
     NODE_OPTIONS="--max_old_space_size=4096" yarn theia build && \
     yarn theia download:plugins && \
