@@ -26,6 +26,7 @@ RUN groupadd -g 2000 simplicite && \
     dnf upgrade -y && \
     dnf install -y epel-release && \
     dnf install -y bash git vim-enhanced iputils bind bind-utils nmap openssh-clients openssl curl wget zip unzip xz ca-certificates libjpeg fontconfig && \
+    dnf install -y libsecret-devel && \
     dnf clean all && \
     cd /usr/local && \
     echo "Installing Node.js $NODE_VERSION" && \
