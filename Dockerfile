@@ -4,7 +4,7 @@ FROM ${BASEIMAGE}
 
 # Installs compatibility libs
 RUN apk add --no-cache make pkgconfig gcc g++ python3 libx11-dev libxkbfile-dev
-ARG version=latest
+ARG version=next
 WORKDIR /home/theia
 ADD $version.package.json ./package.json
 ARG GITHUB_TOKEN
