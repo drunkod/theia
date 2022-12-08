@@ -19,7 +19,7 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           images: |
-            ghcr.io/drunkod/theia
+            ghcr.io/drunkod/vscode-coreos8
           tags: |
             type=ref,event=branch
             type=ref,event=pr
