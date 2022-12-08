@@ -1,4 +1,4 @@
-name: 'CD (multi arch)'
+name: 'vscode coreos8 CD (multi arch)'
 # on:
 #   push:
 #     tags:
